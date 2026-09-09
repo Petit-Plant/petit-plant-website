@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Petit Plant | Fresh Hydroponic Produce</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Petit Plant grows fresh hydroponic vegetables and herbs for hotels, restaurants, cafés and catering in Morocco.">
+    <title>Petit Plant | Agriculture Hydroponique au Maroc</title>
+
+    <meta name="description"
+        content="Petit Plant est une entreprise d'agriculture hydroponique basée à Ouarzazate, Maroc.">
 
     <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -22,621 +31,1201 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             color: #1A3A2A;
-            background: #F8F7F2;
-            line-height: 1.6;
+            background: #F7F6F1;
         }
+
 
         /* =========================
-           NAVIGATION
+           HEADER
         ========================= */
 
-        nav {
-            position: absolute;
-            top: 0;
-            left: 0;
+        header {
             width: 100%;
-            padding: 22px 6%;
+            background: #F7F6F1;
+        }
+
+        .navbar {
+            min-height: 86px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            z-index: 10;
+            padding: 12px 4%;
+            gap: 25px;
         }
 
-        .nav-logo {
-            width: 145px;
+        .header-logo {
+            width: 230px;
+            max-width: 25%;
             height: auto;
+            object-fit: contain;
         }
 
-        .nav-links {
+        .navigation {
             display: flex;
-            gap: 35px;
-            list-style: none;
+            align-items: center;
+            justify-content: center;
+            gap: 22px;
+            flex: 1;
         }
 
-        .nav-links a {
-            color: white;
+        .navigation a {
             text-decoration: none;
-            font-size: 15px;
-            font-weight: bold;
-            transition: opacity 0.3s;
+            color: #1A3A2A;
+            font-size: 12px;
+            white-space: nowrap;
+            transition: color 0.2s;
         }
 
-        .nav-links a:hover {
-            opacity: 0.7;
+        .navigation a:hover {
+            color: #649C30;
         }
+
+        .navigation a.active {
+            color: #649C30;
+            font-weight: bold;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            white-space: nowrap;
+        }
+
+        .languages {
+            display: flex;
+            gap: 8px;
+            font-size: 12px;
+        }
+
+        .languages a {
+            color: #1A3A2A;
+            text-decoration: none;
+        }
+
+        .languages a:hover {
+            color: #649C30;
+        }
+
+        .social-link {
+            color: #1A3A2A;
+            text-decoration: none;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
 
         /* =========================
            HERO
         ========================= */
 
         .hero {
-            min-height: 100vh;
+            position: relative;
+            min-height: 570px;
+
             background-image:
                 linear-gradient(
-                    rgba(20, 45, 32, 0.30),
-                    rgba(20, 45, 32, 0.45)
+                    90deg,
+                    rgba(8, 36, 25, 0.78) 0%,
+                    rgba(8, 36, 25, 0.52) 38%,
+                    rgba(8, 36, 25, 0.10) 70%,
+                    rgba(8, 36, 25, 0.05) 100%
                 ),
                 url("Foto pagina web.png");
 
             background-size: cover;
             background-position: center;
+
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 100px 25px 60px;
+
+            overflow: hidden;
         }
 
         .hero-content {
-            max-width: 850px;
+            position: relative;
+            z-index: 2;
+
+            max-width: 720px;
+
+            margin-left: 6%;
+
             color: white;
+
+            padding: 70px 0;
         }
 
-        .hero-logo {
-            width: 190px;
-            max-width: 55%;
+        .hero-brand {
             margin-bottom: 25px;
-            filter: drop-shadow(0 3px 8px rgba(0,0,0,0.25));
+        }
+
+        .hero-brand-name {
+            font-size: 30px;
+            letter-spacing: 7px;
+            font-weight: 500;
+        }
+
+        .hero-brand-subtitle {
+            margin-top: 7px;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            font-weight: normal;
+        }
+
+        .hero-line {
+            width: 50px;
+            height: 2px;
+
+            background: #9CD16B;
+
+            margin: 28px 0;
         }
 
         .hero h1 {
-            font-size: clamp(42px, 6vw, 76px);
-            line-height: 1.05;
+            max-width: 650px;
+
+            font-size: clamp(38px, 4vw, 58px);
+
+            font-weight: 400;
+
+            line-height: 1.15;
+
             margin-bottom: 20px;
-            font-weight: 700;
         }
 
-        .hero p {
-            font-size: clamp(19px, 2.5vw, 27px);
-            max-width: 700px;
+        .hero-description {
+            font-size: 21px;
+
+            line-height: 1.5;
+
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .button-primary,
+        .button-secondary {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 46px;
+
+            padding: 0 25px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            transition: all 0.2s;
+        }
+
+        .button-primary {
+
+            background: #649C30;
+
+            color: white;
+        }
+
+        .button-primary:hover {
+
+            background: #2D6B4F;
+
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+
+            border: 1px solid white;
+
+            color: white;
+        }
+
+        .button-secondary:hover {
+
+            background: white;
+
+            color: #1A3A2A;
+        }
+
+
+        /* =========================
+           LOCATION
+        ========================= */
+
+        .location {
+
+            position: absolute;
+
+            right: 5%;
+
+            bottom: 38px;
+
+            z-index: 2;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 13px 18px;
+
+            border-radius: 10px;
+
+            background: rgba(26, 58, 42, 0.82);
+
+            color: white;
+
+            font-size: 14px;
+
+            backdrop-filter: blur(5px);
+        }
+
+
+        /* =========================
+           BENEFITS
+        ========================= */
+
+        .benefits {
+
+            background: #F7F6F1;
+
+            padding: 40px 5% 55px;
+
+            display: grid;
+
+            grid-template-columns: repeat(5, 1fr);
+
+            max-width: 1500px;
+
             margin: auto;
         }
 
-        .hero-button {
-            display: inline-block;
-            margin-top: 35px;
-            padding: 15px 32px;
-            background: #649C30;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: transform 0.3s, background 0.3s;
+        .benefit {
+
+            text-align: center;
+
+            padding: 12px 25px 5px;
+
+            border-right: 1px solid #D6D6D0;
         }
 
-        .hero-button:hover {
-            transform: translateY(-3px);
-            background: #2D6B4F;
+        .benefit:last-child {
+
+            border-right: none;
         }
+
+        .benefit-icon {
+
+            font-size: 34px;
+
+            margin-bottom: 13px;
+
+            color: #2D6B4F;
+        }
+
+        .benefit h3 {
+
+            font-size: 16px;
+
+            margin-bottom: 9px;
+
+            font-weight: 600;
+        }
+
+        .benefit p {
+
+            color: #58665D;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
 
         /* =========================
            GENERAL SECTIONS
         ========================= */
 
-        section {
+        section.content-section {
+
             padding: 90px 8%;
+
+            text-align: center;
         }
 
         .section-title {
-            text-align: center;
-            font-size: 40px;
+
+            font-size: 42px;
+
+            font-weight: 400;
+
             margin-bottom: 20px;
+
             color: #1A3A2A;
         }
 
-        .section-intro {
-            max-width: 720px;
-            margin: 0 auto 50px;
-            text-align: center;
-            color: #53645A;
+        .section-text {
+
+            max-width: 760px;
+
+            margin: auto;
+
+            color: #526057;
+
             font-size: 18px;
+
+            line-height: 1.7;
         }
+
 
         /* =========================
            ABOUT
         ========================= */
 
         .about {
-            background: #F8F7F2;
+
+            background: white;
         }
 
-        .about-content {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .about-content p {
-            font-size: 19px;
-            color: #46564D;
-        }
 
         /* =========================
            PRODUCTS
         ========================= */
 
         .products {
-            background: white;
+
+            background: #F0F3EC;
         }
 
         .product-grid {
-            max-width: 1050px;
-            margin: auto;
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+            max-width: 1100px;
+
+            margin: 45px auto 0;
         }
 
         .product-card {
-            padding: 35px 25px;
-            background: #F8F7F2;
-            border-radius: 16px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
 
-        .product-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 30px rgba(26, 58, 42, 0.10);
-        }
+            background: white;
 
-        .product-icon {
-            font-size: 48px;
-            margin-bottom: 15px;
+            padding: 30px 20px;
+
+            border-radius: 10px;
         }
 
         .product-card h3 {
-            font-size: 24px;
+
             margin-bottom: 10px;
         }
 
         .product-card p {
-            color: #607067;
+
+            font-size: 14px;
+
+            color: #58665D;
         }
+
 
         /* =========================
-           WHY HYDROPONICS
+           PROFESSIONAL
         ========================= */
 
-        .why {
-            background: #EAF0E8;
-        }
+        .professional {
 
-        .benefits {
-            max-width: 1050px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
-
-        .benefit {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .benefit-number {
-            font-size: 38px;
-            font-weight: bold;
-            color: #649C30;
-            margin-bottom: 10px;
-        }
-
-        .benefit h3 {
-            margin-bottom: 8px;
-        }
-
-        .benefit p {
-            color: #59695F;
-            font-size: 15px;
-        }
-
-        /* =========================
-           BUSINESS
-        ========================= */
-
-        .business {
             background: #1A3A2A;
-            color: white;
-            text-align: center;
-        }
 
-        .business .section-title {
             color: white;
         }
 
-        .business .section-intro {
-            color: #DCE6DF;
+        .professional .section-title {
+
+            color: white;
         }
 
-        .business-list {
-            max-width: 850px;
-            margin: auto;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
+        .professional .section-text {
+
+            color: #D8E0DA;
         }
 
-        .business-item {
-            padding: 14px 24px;
-            border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 30px;
-        }
 
         /* =========================
            CONTACT
         ========================= */
 
         .contact {
-            background: #F8F7F2;
-            text-align: center;
+
+            background: white;
         }
 
-        .contact-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 16px 35px;
-            background: #2D6B4F;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
+        .contact-info {
+
+            margin-top: 30px;
+
+            line-height: 2;
+
+            color: #526057;
         }
+
 
         /* =========================
            FOOTER
         ========================= */
 
         footer {
+
             background: #10261B;
-            color: #C9D4CD;
+
+            color: white;
+
+            padding: 45px 8%;
+
             text-align: center;
-            padding: 30px 20px;
+        }
+
+        .footer-logo {
+
+            width: 180px;
+
+            max-width: 70%;
+
+            margin-bottom: 20px;
+        }
+
+        footer p {
+
+            margin: 6px 0;
+
+            color: #C9D4CD;
+
             font-size: 14px;
         }
+
+        footer a {
+
+            color: #C9D4CD;
+
+            text-decoration: none;
+
+            margin: 0 8px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            .navigation {
+
+                gap: 12px;
+            }
+
+            .navigation a {
+
+                font-size: 10px;
+            }
+
+            .benefits {
+
+                grid-template-columns: repeat(3, 1fr);
+
+                gap: 30px;
+            }
+
+            .benefit {
+
+                border-right: none;
+            }
+
+            .product-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
 
         /* =========================
            MOBILE
         ========================= */
 
-        @media (max-width: 800px) {
+        @media (max-width: 750px) {
 
-            .nav-links {
-                display: none;
+            .navbar {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                padding: 15px;
+            }
+
+            .header-logo {
+
+                max-width: 230px;
+
+                width: 220px;
+            }
+
+            .navigation {
+
+                order: 3;
+
+                flex-basis: 100%;
+
+                overflow-x: auto;
+
+                justify-content: flex-start;
+
+                padding-bottom: 5px;
+            }
+
+            .header-right {
+
+                font-size: 11px;
             }
 
             .hero {
-                min-height: 90vh;
+
+                min-height: 650px;
+
+                background-position: center;
             }
 
-            .hero-logo {
-                width: 150px;
+            .hero-content {
+
+                margin-left: 7%;
+
+                margin-right: 7%;
+
+                padding-top: 90px;
             }
 
-            section {
-                padding: 70px 6%;
-            }
+            .hero-brand-name {
 
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .benefits {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 500px) {
-
-            .benefits {
-                grid-template-columns: 1fr;
+                font-size: 24px;
             }
 
             .hero h1 {
-                font-size: 42px;
+
+                font-size: 40px;
+            }
+
+            .hero-description {
+
+                font-size: 18px;
+            }
+
+            .location {
+
+                right: 7%;
+
+                bottom: 25px;
+            }
+
+            .benefits {
+
+                grid-template-columns: 1fr;
+
+                padding: 45px 8%;
+            }
+
+            .benefit {
+
+                border-bottom: 1px solid #D6D6D0;
+
+                padding: 25px 0;
+            }
+
+            .benefit:last-child {
+
+                border-bottom: none;
+            }
+
+            .product-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+
+                font-size: 34px;
             }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
+
     <!-- =========================
-         NAVIGATION
+         HEADER
     ========================= -->
 
-    <nav>
+    <header>
 
-        <img
-            class="nav-logo"
-            src="Logotipo Petit Plant Colorido (1).png"
-            alt="Petit Plant logo"
-        >
+        <nav class="navbar">
 
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#hydroponics">Why hydroponics?</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+            <a href="#accueil">
 
-    </nav>
+                <img
+                    class="header-logo"
+                    src="Logotipo Petit Plant Colorido (1).png"
+                    alt="Petit Plant">
+
+            </a>
+
+
+            <div class="navigation">
+
+                <a class="active" href="#accueil">
+                    Accueil
+                </a>
+
+                <a href="#apropos">
+                    À propos
+                </a>
+
+                <a href="#agriculture">
+                    Notre agriculture
+                </a>
+
+                <a href="#produits">
+                    Nos produits
+                </a>
+
+                <a href="#professionnels">
+                    Pour les professionnels
+                </a>
+
+                <a href="#selection">
+                    Sélection Privée
+                </a>
+
+                <a href="#engagements">
+                    Nos engagements
+                </a>
+
+                <a href="#ouarzazate">
+                    Ouarzazate & Maroc
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <div class="languages">
+
+                    <a href="#">
+                        FR
+                    </a>
+
+                    <span>|</span>
+
+                    <a href="#">
+                        EN
+                    </a>
+
+                    <span>|</span>
+
+                    <a href="#">
+                        العربية
+                    </a>
+
+                </div>
+
+
+                <a
+                    class="social-link"
+                    href="https://www.instagram.com/petitplantmaroc/"
+                    target="_blank"
+                    aria-label="Instagram">
+
+                    ◎
+
+                </a>
+
+
+                <a
+                    class="social-link"
+                    href="#"
+                    aria-label="Facebook">
+
+                    f
+
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
 
 
     <!-- =========================
          HERO
     ========================= -->
 
-    <header class="hero">
+    <main id="accueil">
 
-        <div class="hero-content">
+        <section class="hero">
 
-            <img
-                class="hero-logo"
-                src="Logotipo Petit Plant Colorido (1).png"
-                alt="Petit Plant"
-            >
+            <div class="hero-content">
 
-            <h1>Fresh. Local. Hydroponic.</h1>
+                <div class="hero-brand">
 
-            <p>
-                Fresh vegetables and herbs, grown locally in Morocco
-                with precision and care.
-            </p>
+                    <div class="hero-brand-name">
+                        PETIT PLANT
+                    </div>
 
-            <a class="hero-button" href="#contact">
-                Discover Petit Plant
-            </a>
+                    <div class="hero-brand-subtitle">
+                        AGRICULTURE HYDROPONIQUE
+                    </div>
 
-        </div>
-
-    </header>
+                </div>
 
 
-    <!-- =========================
-         ABOUT
-    ========================= -->
+                <div class="hero-line"></div>
 
-    <section class="about" id="about">
 
-        <div class="about-content">
+                <h1>
+                    L'agriculture hydroponique,<br>
+                    cultivée au Maroc.
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Des produits frais, cultivés localement avec soin.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        class="button-primary"
+                        href="#produits">
+
+                        Découvrir nos produits →
+                    </a>
+
+
+                    <a
+                        class="button-secondary"
+                        href="#contact">
+
+                        Nous contacter
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="location">
+
+                📍 Ouarzazate, Maroc
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             BENEFITS
+        ========================= -->
+
+        <section class="benefits">
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    ◜
+                </div>
+
+                <h3>
+                    Produits frais
+                </h3>
+
+                <p>
+                    Des récoltes de qualité,
+                    toute l'année.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    ⌖
+                </div>
+
+                <h3>
+                    Production locale
+                </h3>
+
+                <p>
+                    À Ouarzazate,
+                    au cœur du Maroc.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    💧
+                </div>
+
+                <h3>
+                    Agriculture hydroponique
+                </h3>
+
+                <p>
+                    Une culture moderne
+                    et maîtrisée.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    ♢
+                </div>
+
+                <h3>
+                    Partenaires de confiance
+                </h3>
+
+                <p>
+                    Pour les professionnels
+                    et les particuliers.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    ☆
+                </div>
+
+                <h3>
+                    Sélection Privée
+                </h3>
+
+                <p>
+                    Des produits d'exception
+                    pour des clients exigeants.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             À PROPOS
+        ========================= -->
+
+        <section
+            class="content-section about"
+            id="apropos">
 
             <h2 class="section-title">
-                Freshness, grown differently.
+                Cultiver autrement.
             </h2>
 
-            <p>
-                Petit Plant is a hydroponic farm based in Morocco,
-                growing fresh, high-quality vegetables and herbs
-                for professionals who care about freshness,
-                consistency and local production.
+            <p class="section-text">
+
+                Petit Plant est une entreprise d'agriculture
+                hydroponique basée à Ouarzazate, au Maroc.
+                Nous cultivons des légumes frais et des herbes
+                aromatiques avec une approche moderne,
+                locale et attentive à la qualité.
+
             </p>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- =========================
-         PRODUCTS
-    ========================= -->
 
-    <section class="products" id="products">
+        <!-- =========================
+             AGRICULTURE
+        ========================= -->
 
-        <h2 class="section-title">
-            Our products
-        </h2>
+        <section
+            class="content-section"
+            id="agriculture">
 
-        <p class="section-intro">
-            Freshly harvested hydroponic produce, grown with
-            precision and delivered with care.
-        </p>
+            <h2 class="section-title">
+                Notre agriculture
+            </h2>
 
-        <div class="product-grid">
+            <p class="section-text">
 
-            <div class="product-card">
+                L'hydroponie nous permet de cultiver dans
+                un environnement maîtrisé et de produire
+                des végétaux frais avec régularité et précision.
 
-                <div class="product-icon">🥬</div>
+            </p>
 
-                <h3>Lettuce</h3>
+        </section>
+
+
+
+        <!-- =========================
+             PRODUITS
+        ========================= -->
+
+        <section
+            class="content-section products"
+            id="produits">
+
+            <h2 class="section-title">
+                Nos produits
+            </h2>
+
+            <p class="section-text">
+
+                Découvrez les produits actuellement cultivés
+                par Petit Plant.
+
+            </p>
+
+
+            <div class="product-grid">
+
+                <div class="product-card">
+
+                    <h3>
+                        Laitue
+                    </h3>
+
+                    <p>
+                        Fraîche et cultivée localement.
+                    </p>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <h3>
+                        Menthe
+                    </h3>
+
+                    <p>
+                        Fraîche et aromatique.
+                    </p>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <h3>
+                        Basilic
+                    </h3>
+
+                    <p>
+                        Cultivé avec soin.
+                    </p>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <h3>
+                        Coriandre
+                    </h3>
+
+                    <p>
+                        Fraîche et savoureuse.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PROFESSIONALS
+        ========================= -->
+
+        <section
+            class="content-section professional"
+            id="professionnels">
+
+            <h2 class="section-title">
+                Pour les professionnels
+            </h2>
+
+            <p class="section-text">
+
+                Petit Plant accompagne les hôtels,
+                restaurants, cafés, services de catering,
+                chefs et professionnels de l'alimentation
+                à la recherche de produits frais et locaux.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             SÉLECTION PRIVÉE
+        ========================= -->
+
+        <section
+            class="content-section"
+            id="selection">
+
+            <h2 class="section-title">
+                Sélection Privée
+            </h2>
+
+            <p class="section-text">
+
+                Une sélection pensée pour ceux
+                qui recherchent l'excellence.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             ENGAGEMENTS
+        ========================= -->
+
+        <section
+            class="content-section"
+            id="engagements">
+
+            <h2 class="section-title">
+                Nos engagements
+            </h2>
+
+            <p class="section-text">
+
+                Qualité. Fraîcheur. Production locale.
+                Agriculture responsable. Innovation.
+                Attention aux détails.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             OUARZAZATE
+        ========================= -->
+
+        <section
+            class="content-section"
+            id="ouarzazate">
+
+            <h2 class="section-title">
+                Ouarzazate & Maroc
+            </h2>
+
+            <p class="section-text">
+
+                Petit Plant s'inscrit dans une agriculture
+                moderne adaptée aux conditions locales,
+                au cœur de Ouarzazate et du Maroc.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACT
+        ========================= -->
+
+        <section
+            class="content-section contact"
+            id="contact">
+
+            <h2 class="section-title">
+                Contactez-nous
+            </h2>
+
+            <p class="section-text">
+
+                Vous souhaitez en savoir plus sur nos produits
+                ou travailler avec Petit Plant ?
+
+            </p>
+
+
+            <div class="contact-info">
 
                 <p>
-                    Fresh, crisp and locally grown lettuce,
-                    harvested for maximum freshness.
+                    📧 contact@petit-plant.com
+                </p>
+
+                <p>
+                    📱 +212 6 64 40 50 41
+                </p>
+
+                <p>
+                    📍 41 Rue Tazndarte,
+                    Hay Taourirte, Ouarzazate, Maroc
                 </p>
 
             </div>
 
+        </section>
 
-            <div class="product-card">
+    </main>
 
-                <div class="product-icon">🌿</div>
-
-                <h3>Basil</h3>
-
-                <p>
-                    Aromatic fresh basil, grown in a controlled
-                    hydroponic environment.
-                </p>
-
-            </div>
-
-
-            <div class="product-card">
-
-                <div class="product-icon">🌱</div>
-
-                <h3>Fresh greens</h3>
-
-                <p>
-                    Carefully grown leafy greens for professional
-                    kitchens and hospitality businesses.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         WHY HYDROPONICS
-    ========================= -->
-
-    <section class="why" id="hydroponics">
-
-        <h2 class="section-title">
-            Why hydroponics?
-        </h2>
-
-        <p class="section-intro">
-            A modern way of growing that allows us to focus
-            on quality, consistency and responsible production.
-        </p>
-
-        <div class="benefits">
-
-            <div class="benefit">
-
-                <div class="benefit-number">01</div>
-
-                <h3>Local</h3>
-
-                <p>
-                    Produce grown close to the people who enjoy it.
-                </p>
-
-            </div>
-
-
-            <div class="benefit">
-
-                <div class="benefit-number">02</div>
-
-                <h3>Fresh</h3>
-
-                <p>
-                    Harvested with freshness and quality in mind.
-                </p>
-
-            </div>
-
-
-            <div class="benefit">
-
-                <div class="benefit-number">03</div>
-
-                <h3>Controlled</h3>
-
-                <p>
-                    A controlled growing environment for consistent
-                    production.
-                </p>
-
-            </div>
-
-
-            <div class="benefit">
-
-                <div class="benefit-number">04</div>
-
-                <h3>Efficient</h3>
-
-                <p>
-                    Hydroponic cultivation designed to use resources
-                    efficiently.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         BUSINESS
-    ========================= -->
-
-    <section class="business">
-
-        <h2 class="section-title">
-            Grown for professionals.
-        </h2>
-
-        <p class="section-intro">
-            We work with businesses that value fresh,
-            consistent and locally grown produce.
-        </p>
-
-        <div class="business-list">
-
-            <div class="business-item">
-                Hotels
-            </div>
-
-            <div class="business-item">
-                Restaurants
-            </div>
-
-            <div class="business-item">
-                Cafés
-            </div>
-
-            <div class="business-item">
-                Catering
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
-    <section class="contact" id="contact">
-
-        <h2 class="section-title">
-            Let's grow something fresh.
-        </h2>
-
-        <p class="section-intro">
-            Interested in working with Petit Plant?
-            Get in touch with us.
-        </p>
-
-        <a
-            class="contact-button"
-            href="mailto:contact@petit-plant.com"
-        >
-            Contact Petit Plant
-        </a>
-
-    </section>
 
 
     <!-- =========================
@@ -645,15 +1234,21 @@
 
     <footer>
 
+        <img
+            class="footer-logo"
+            src="Logotipo Petit Plant Colorido (1).png"
+            alt="Petit Plant">
+
         <p>
-            © 2026 Petit Plant. All rights reserved.
+            Agriculture hydroponique à Ouarzazate, Maroc.
         </p>
 
         <p>
-            Hydroponic farming · Morocco
+            © Petit Plant 2026
         </p>
 
     </footer>
+
 
 </body>
 </html>
