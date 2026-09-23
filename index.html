@@ -56,9 +56,7 @@
       font-family: Arial, sans-serif;
     }
 
-    /* =========================
-       HEADER
-    ========================= */
+    /* HEADER */
 
     header {
       position: sticky;
@@ -109,16 +107,6 @@
       color: var(--leaf);
     }
 
-    .language-label {
-      color: var(--forest);
-      font-size: 13px;
-      letter-spacing: 0.04em;
-      font-weight: 500;
-      padding: 5px 0;
-      cursor: default;
-      white-space: nowrap;
-    }
-
     .social-links {
       display: flex;
       align-items: center;
@@ -149,9 +137,7 @@
       fill: currentColor;
     }
 
-    /* =========================
-       HERO
-    ========================= */
+    /* HERO */
 
     .hero {
       min-height: 760px;
@@ -255,9 +241,7 @@
       color: var(--forest);
     }
 
-    /* =========================
-       INTRO
-    ========================= */
+    /* INTRO */
 
     .intro {
       padding: 110px 8%;
@@ -308,9 +292,7 @@
       object-fit: cover;
     }
 
-    /* =========================
-       VALUES
-    ========================= */
+    /* VALUES */
 
     .values {
       background: var(--cream);
@@ -366,9 +348,7 @@
       line-height: 1.7;
     }
 
-    /* =========================
-       PRODUCTS
-    ========================= */
+    /* PRODUCTS */
 
     .products-preview {
       padding: 110px 8%;
@@ -457,9 +437,7 @@
       border-color: var(--green);
     }
 
-    /* =========================
-       FOR YOUR TABLE
-    ========================= */
+    /* FOR YOUR TABLE */
 
     .table-section {
       padding: 0 8% 110px;
@@ -532,9 +510,7 @@
       color: rgba(255,255,255,0.65);
     }
 
-    /* =========================
-       PRIVATE SELECTION
-    ========================= */
+    /* PRIVATE SELECTION */
 
     .private-section {
       background: var(--cream);
@@ -563,9 +539,7 @@
       line-height: 1.8;
     }
 
-    /* =========================
-       CAREERS
-    ========================= */
+    /* CAREERS */
 
     .careers-section {
       background: var(--white);
@@ -594,9 +568,7 @@
       max-width: 600px;
     }
 
-    /* =========================
-       CONTACT
-    ========================= */
+    /* CONTACT */
 
     .contact-section {
       background: var(--forest);
@@ -718,9 +690,7 @@
       border-color: var(--light-leaf);
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       background: #F1EFE9;
@@ -771,9 +741,7 @@
       font-size: 11px;
     }
 
-    /* =========================
-       RESPONSIVE
-    ========================= */
+    /* RESPONSIVE */
 
     @media (max-width: 1050px) {
       .nav-container {
@@ -901,8 +869,7 @@
 
     @media (max-width: 520px) {
 
-      /* Petit Plant · Ouarzazate, Morocco
-         changes to Deep Forest only on mobile */
+      /* Only on phones */
       .hero .eyebrow {
         color: #1A3A2A;
       }
@@ -916,10 +883,6 @@
       }
 
       nav a {
-        font-size: 12px;
-      }
-
-      .language-label {
         font-size: 12px;
       }
 
@@ -950,7 +913,6 @@
 
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="nav-container">
 
@@ -967,9 +929,6 @@
         <a href="#careers">Careers</a>
         <a href="#contact">Contact</a>
 
-        <!-- Site language: English -->
-        <span class="language-label" aria-label="Website language: English">EN</span>
-
         <div class="social-links">
 
           <a
@@ -979,25 +938,10 @@
             aria-label="Instagram"
           >
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <rect
-                x="3"
-                y="3"
-                width="18"
-                height="18"
-                rx="5"
-                ry="5"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <circle
-                cx="12"
-                cy="12"
-                r="4"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              />
+              <rect x="3" y="3" width="18" height="18" rx="5" ry="5"
+                    fill="none" stroke="currentColor" stroke-width="2"/>
+              <circle cx="12" cy="12" r="4"
+                      fill="none" stroke="currentColor" stroke-width="2"/>
               <circle cx="17.5" cy="6.5" r="1.2"/>
             </svg>
           </a>
@@ -1019,10 +963,8 @@
     </div>
   </header>
 
-
   <main>
 
-    <!-- HOME / HERO -->
     <section class="hero" id="home">
 
       <img
@@ -1062,16 +1004,12 @@
     </section>
 
 
-    <!-- OUR STORY -->
     <section class="intro" id="story">
 
       <div class="intro-grid">
 
         <div>
-
-          <div class="section-label">
-            Our Story
-          </div>
+          <div class="section-label">Our Story</div>
 
           <h2>
             A new way of growing,
@@ -1091,113 +1029,66 @@
             agriculture, careful cultivation and a deep appreciation for
             fresh, quality produce.
           </p>
-
         </div>
 
         <div class="intro-image">
-
           <img
             src="hydroponic-lettuce-nft.jpg"
             alt="Hydroponic lettuce growing in an NFT system"
           >
-
         </div>
 
       </div>
-
     </section>
 
 
-    <!-- QUALITY / FRESHNESS / SERVICE -->
     <section class="values">
 
       <div class="values-header">
-
-        <div class="section-label">
-          What matters to us
-        </div>
-
-        <h2>
-          Grown with purpose.
-        </h2>
-
+        <div class="section-label">What matters to us</div>
+        <h2>Grown with purpose.</h2>
       </div>
 
       <div class="values-grid">
 
         <article class="value-card">
-
-          <div class="value-number">
-            01
-          </div>
-
-          <h3>
-            Quality
-          </h3>
-
+          <div class="value-number">01</div>
+          <h3>Quality</h3>
           <p>
             We pay close attention to the quality of every product we grow
             and every order we prepare.
           </p>
-
         </article>
 
-
         <article class="value-card">
-
-          <div class="value-number">
-            02
-          </div>
-
-          <h3>
-            Freshness
-          </h3>
-
+          <div class="value-number">02</div>
+          <h3>Freshness</h3>
           <p>
             Fresh vegetables and leafy greens, cultivated with care and
             handled with the same attention through delivery.
           </p>
-
         </article>
 
-
         <article class="value-card">
-
-          <div class="value-number">
-            03
-          </div>
-
-          <h3>
-            Service
-          </h3>
-
+          <div class="value-number">03</div>
+          <h3>Service</h3>
           <p>
             From cultivation to delivery, we take care of every step with
             the aim of making things easier for you.
           </p>
-
         </article>
 
       </div>
-
     </section>
 
 
-    <!-- PRODUCTS -->
     <section class="products-preview" id="products">
 
       <div class="products-heading">
 
         <div>
-
-          <div class="section-label">
-            Our Products
-          </div>
-
-          <h2>
-            Freshly grown.
-          </h2>
-
+          <div class="section-label">Our Products</div>
+          <h2>Freshly grown.</h2>
         </div>
 
         <p>
@@ -1207,75 +1098,47 @@
 
       </div>
 
-
       <div class="product-preview-grid">
 
         <article class="product-preview-card">
-
           <div class="image-wrap">
             <img src="lettuce.jpg" alt="Lettuce">
           </div>
-
-          <h3>
-            Lettuce
-          </h3>
-
+          <h3>Lettuce</h3>
         </article>
 
-
         <article class="product-preview-card">
-
           <div class="image-wrap">
             <img src="spinach.jpg" alt="Spinach">
           </div>
-
-          <h3>
-            Spinach
-          </h3>
-
+          <h3>Spinach</h3>
         </article>
 
-
         <article class="product-preview-card">
-
           <div class="image-wrap">
             <img src="coriander.jpg" alt="Coriander">
           </div>
-
-          <h3>
-            Coriander
-          </h3>
-
+          <h3>Coriander</h3>
         </article>
 
-
         <article class="product-preview-card">
-
           <div class="image-wrap">
             <img src="basil.jpg" alt="Basil">
           </div>
-
-          <h3>
-            Basil
-          </h3>
-
+          <h3>Basil</h3>
         </article>
 
       </div>
 
-
       <div class="center-button">
-
         <a href="#all-products" class="dark-btn">
           View Our Full Selection
         </a>
-
       </div>
 
     </section>
 
 
-    <!-- FULL PRODUCT SELECTION -->
     <section
       id="all-products"
       class="products-preview"
@@ -1284,108 +1147,60 @@
 
       <div class="product-preview-grid">
 
-
         <article class="product-preview-card">
-
           <div class="image-wrap">
             <img src="cucumber.jpg" alt="Cucumber">
           </div>
-
-          <h3>
-            Cucumber
-          </h3>
-
+          <h3>Cucumber</h3>
         </article>
 
-
         <article class="product-preview-card">
-
           <div class="image-wrap">
             <img src="tomato.jpg" alt="Tomato">
           </div>
-
-          <h3>
-            Tomato
-          </h3>
-
+          <h3>Tomato</h3>
         </article>
 
-
         <article class="product-preview-card">
-
           <div class="image-wrap">
             <img src="cherry-tomato.jpg" alt="Cherry Tomato">
           </div>
-
-          <h3>
-            Cherry Tomato
-          </h3>
-
+          <h3>Cherry Tomato</h3>
         </article>
 
-
         <article class="product-preview-card">
-
           <div class="image-wrap">
             <img src="bell-pepper.jpg" alt="Bell Pepper">
           </div>
-
-          <h3>
-            Bell Pepper
-          </h3>
-
+          <h3>Bell Pepper</h3>
         </article>
 
-
         <article class="product-preview-card">
-
           <div class="image-wrap">
             <img src="eggplant.jpg" alt="Eggplant">
           </div>
-
-          <h3>
-            Eggplant
-          </h3>
-
+          <h3>Eggplant</h3>
         </article>
 
-
         <article class="product-preview-card">
-
           <div class="image-wrap">
             <img src="dragon-fruit.jpg" alt="Dragon Fruit">
           </div>
-
-          <h3>
-            Dragon Fruit
-          </h3>
-
+          <h3>Dragon Fruit</h3>
         </article>
 
-
         <article class="product-preview-card">
-
           <div class="image-wrap">
             <img src="leafy-greens.jpeg" alt="Leafy Greens">
           </div>
-
-          <h3>
-            Leafy Greens
-          </h3>
-
+          <h3>Leafy Greens</h3>
         </article>
 
-
         <article class="product-preview-card">
-
           <div class="image-wrap">
             <img src="zucchini.jpg" alt="Zucchini">
           </div>
-
-          <h3>
-            Zucchini
-          </h3>
-
+          <h3>Zucchini</h3>
         </article>
 
       </div>
@@ -1393,30 +1208,22 @@
     </section>
 
 
-    <!-- FOR YOUR TABLE -->
     <section class="table-section" id="table">
 
       <div class="table-grid">
 
         <div class="table-image">
-
           <img
             src="fine-dining-restaurant.jpg"
             alt="Elegant fine dining restaurant"
           >
-
         </div>
-
 
         <div class="table-content">
 
-          <div class="section-label">
-            For Your Table
-          </div>
+          <div class="section-label">For Your Table</div>
 
-          <h2>
-            Fresh, all year round.
-          </h2>
+          <h2>Fresh, all year round.</h2>
 
           <p>
             A reliable supply of fresh vegetables and leafy greens,
@@ -1424,51 +1231,32 @@
             with punctual delivery in Ouarzazate.
           </p>
 
-
           <div class="table-features">
 
             <div class="table-feature">
-
-              <h3>
-                Consistent supply
-              </h3>
-
+              <h3>Consistent supply</h3>
               <p>
                 Fresh vegetables and leafy greens, available throughout
                 the year.
               </p>
-
             </div>
 
-
             <div class="table-feature">
-
-              <h3>
-                Flexible frequency
-              </h3>
-
+              <h3>Flexible frequency</h3>
               <p>
                 Choose the frequency that works for your needs.
               </p>
-
             </div>
 
-
             <div class="table-feature">
-
-              <h3>
-                Punctual delivery
-              </h3>
-
+              <h3>Punctual delivery</h3>
               <p>
                 Your order arrives when expected, so fresh produce is there
                 when you need it.
               </p>
-
             </div>
 
           </div>
-
 
           <a href="#contact" class="btn btn-outline">
             Get in Touch
@@ -1481,18 +1269,13 @@
     </section>
 
 
-    <!-- PRIVATE SELECTION -->
     <section class="private-section" id="private">
 
       <div class="private-inner">
 
-        <div class="section-label">
-          Private Selection
-        </div>
+        <div class="section-label">Private Selection</div>
 
-        <h2>
-          Something beyond the usual.
-        </h2>
+        <h2>Something beyond the usual.</h2>
 
         <p>
           A more personal way to source exceptional produce for private chefs,
@@ -1509,28 +1292,20 @@
     </section>
 
 
-    <!-- CAREERS -->
     <section class="careers-section" id="careers">
 
       <div class="careers-inner">
 
         <div>
+          <div class="section-label">Careers</div>
 
-          <div class="section-label">
-            Careers
-          </div>
-
-          <h2>
-            Join Petit Plant.
-          </h2>
+          <h2>Join Petit Plant.</h2>
 
           <p>
             We are always open to hearing from people who would like to
             be part of what we are building.
           </p>
-
         </div>
-
 
         <a
           href="mailto:contact@petit-plant.com?subject=Career%20Application"
@@ -1544,16 +1319,13 @@
     </section>
 
 
-    <!-- CONTACT -->
     <section class="contact-section" id="contact">
 
       <div class="contact-inner">
 
         <div>
 
-          <div class="section-label">
-            Contact
-          </div>
+          <div class="section-label">Contact</div>
 
           <h2>
             Let's grow something exceptional.
@@ -1565,27 +1337,17 @@
             delivery in Ouarzazate.
           </p>
 
-
           <div class="contact-details">
 
             <div class="contact-detail">
-
-              <small>
-                Email
-              </small>
-
+              <small>Email</small>
               <a href="mailto:contact@petit-plant.com">
                 contact@petit-plant.com
               </a>
-
             </div>
 
-
             <div class="contact-detail">
-
-              <small>
-                Phone
-              </small>
+              <small>Phone</small>
 
               <a href="tel:+212664405041">
                 +212 664 405041
@@ -1596,20 +1358,11 @@
               <a href="tel:+212664405695">
                 +212 664 405695
               </a>
-
             </div>
 
-
             <div class="contact-detail">
-
-              <small>
-                Location
-              </small>
-
-              <span>
-                Ouarzazate, Morocco
-              </span>
-
+              <small>Location</small>
+              <span>Ouarzazate, Morocco</span>
             </div>
 
           </div>
@@ -1624,7 +1377,6 @@
           enctype="text/plain"
         >
 
-
           <div class="form-group">
 
             <label for="customer-type">
@@ -1636,7 +1388,6 @@
               name="Customer Type"
               required
             >
-
               <option value="" selected disabled>
                 Select one
               </option>
@@ -1648,7 +1399,6 @@
               <option value="Individual">
                 Individual
               </option>
-
             </select>
 
           </div>
@@ -1797,7 +1547,6 @@
   </main>
 
 
-  <!-- FOOTER -->
   <footer>
 
     <div class="footer-top">
@@ -1815,36 +1564,15 @@
 
       </div>
 
-
       <div class="footer-nav">
 
-        <a href="#home">
-          Home
-        </a>
-
-        <a href="#story">
-          Our Story
-        </a>
-
-        <a href="#products">
-          Our Products
-        </a>
-
-        <a href="#table">
-          For Your Table
-        </a>
-
-        <a href="#private">
-          Private Selection
-        </a>
-
-        <a href="#careers">
-          Careers
-        </a>
-
-        <a href="#contact">
-          Contact
-        </a>
+        <a href="#home">Home</a>
+        <a href="#story">Our Story</a>
+        <a href="#products">Our Products</a>
+        <a href="#table">For Your Table</a>
+        <a href="#private">Private Selection</a>
+        <a href="#careers">Careers</a>
+        <a href="#contact">Contact</a>
 
       </div>
 
@@ -1866,10 +1594,7 @@
   </footer>
 
 
-  <!-- JAVASCRIPT -->
   <script>
-
-    // Show Business Name only when Business is selected
 
     const customerType =
       document.getElementById("customer-type");
@@ -1905,7 +1630,6 @@
     );
 
 
-    // Business Name hidden by default
     businessNameGroup.style.display = "none";
 
   </script>
